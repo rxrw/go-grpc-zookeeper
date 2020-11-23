@@ -5,7 +5,7 @@ import (
 	"sync"
 	"time"
 
-	"gitlab.dev.baai.ac.cn/basic-service/go-grpc-zookeeper/common"
+	"github.com/rxrw/go-grpc-zookeeper/common"
 
 	"google.golang.org/grpc/balancer"
 	"google.golang.org/grpc/balancer/base"

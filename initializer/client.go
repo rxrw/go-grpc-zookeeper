@@ -3,9 +3,9 @@ package initializer
 import (
 	"log"
 
-	"gitlab.dev.baai.ac.cn/basic-service/go-grpc-zookeeper/balancer"
+	"github.com/rxrw/go-grpc-zookeeper/balancer"
 
-	registry "gitlab.dev.baai.ac.cn/basic-service/go-grpc-zookeeper/registry/zookeeper"
+	registry "github.com/rxrw/go-grpc-zookeeper/registry/zookeeper"
 
 	"google.golang.org/grpc"
 )
@@ -20,3 +20,4 @@ func RegisterClient(zkServer []string, serviceName string, serviceVersion string
 
 	return c
 }
+

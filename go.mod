@@ -1,4 +1,4 @@
-module gitlab.dev.baai.ac.cn/basic-service/go-grpc-zookeeper
+module github.com/rxrw/go-grpc-zookeeper
 
 go 1.15
 

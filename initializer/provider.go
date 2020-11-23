@@ -5,7 +5,7 @@ import (
 	"log"
 	"net"
 
-	"gitlab.dev.baai.ac.cn/basic-service/go-grpc-zookeeper/config"
+	"github.com/rxrw/go-grpc-zookeeper/config"
 
 	"google.golang.org/grpc"
 )

@@ -9,9 +9,9 @@ import (
 	"syscall"
 	"time"
 
-	"gitlab.dev.baai.ac.cn/basic-service/go-grpc-zookeeper/common"
-	"gitlab.dev.baai.ac.cn/basic-service/go-grpc-zookeeper/registry"
-	zk "gitlab.dev.baai.ac.cn/basic-service/go-grpc-zookeeper/registry/zookeeper"
+	"github.com/rxrw/go-grpc-zookeeper/common"
+	"github.com/rxrw/go-grpc-zookeeper/registry"
+	zk "github.com/rxrw/go-grpc-zookeeper/registry/zookeeper"
 
 	"github.com/google/uuid"
 	"google.golang.org/grpc"

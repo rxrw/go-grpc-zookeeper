@@ -3,7 +3,7 @@ package examples
 import (
 	"context"
 
-	"gitlab.dev.baai.ac.cn/basic-service/go-grpc-zookeeper/proto"
+	"github.com/rxrw/go-grpc-zookeeper/proto"
 )
 
 //HelloWorldService make api a instance
