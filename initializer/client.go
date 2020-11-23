@@ -1,10 +1,11 @@
 package initializer
 
 import (
-	"grpc-worker/balancer"
 	"log"
 
-	registry "grpc-worker/registry/zookeeper"
+	"gitlab.dev.baai.ac.cn/basic-service/go-grpc-zookeeper/balancer"
+
+	registry "gitlab.dev.baai.ac.cn/basic-service/go-grpc-zookeeper/registry/zookeeper"
 
 	"google.golang.org/grpc"
 )

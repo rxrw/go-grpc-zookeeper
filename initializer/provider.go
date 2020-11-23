@@ -1,12 +1,13 @@
-package main
+package initializer
 
 import (
 	"fmt"
-	"grpc-worker/initializer"
 	"log"
 	"net"
 
-	"grpc-worker/config"
+	"gitlab.dev.baai.ac.cn/basic-service/go-grpc-zookeeper/initializer"
+
+	"gitlab.dev.baai.ac.cn/basic-service/go-grpc-zookeeper/config"
 
 	"google.golang.org/grpc"
 )
@@ -14,7 +15,7 @@ import (
 func registerAndStartServer() (*grpc.Server, int) {
 	serverConfig := config.GetRPCConfig(false)
 
-	return initializer.StartService(serverConfig.Name, serverConfig.Version, serverConfig.Discovery.Url, serverConfig.Address, serverConfig.Port)
+	return StartService(serverConfig.Name, serverConfig.Version, serverConfig.Discovery.Url, serverConfig.Address, serverConfig.Port)
 }
 
 func registerClient() map[string]*grpc.ClientConn {
@@ -22,7 +23,7 @@ func registerClient() map[string]*grpc.ClientConn {
 	Conn := make(map[string]*grpc.ClientConn)
 	// 多例注册到数组
 	for _, service := range clientConfig.Client.Servers {
-		Conn[service.Name] = initializer.RegisterClient(clientConfig.Discovery.Url, service.Name, service.Version)
+		Conn[service.Name] = RegisterClient(clientConfig.Discovery.Url, service.Name, service.Version)
 	}
 	return Conn
 }
