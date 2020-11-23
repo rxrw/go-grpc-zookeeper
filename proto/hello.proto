@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package proto;
+
+option go_package="grpc-worker/proto";
+
+service HelloWorld {
+    rpc AreYouOk(GreeterInfo) returns (ReturnMessage) {}
+};
+
+
+service Goodbye{
+    rpc SeeYouNever(GreeterInfo) returns (ReturnMessage) {}
+};
+
+
+message GreeterInfo {
+    string name = 1;
+    string age = 2;
+}
+
+message ReturnMessage {
+    string message = 1;
+}
