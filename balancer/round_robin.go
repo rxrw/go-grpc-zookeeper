@@ -1,7 +1,7 @@
 package balancer
 
 import (
-	"gitlab.dev.baai.ac.cn/basic-service/go-grpc-zookeeper/common"
+	"github.com/rxrw/go-grpc-zookeeper/common"
 
 	"math/rand"
 	"sync"
