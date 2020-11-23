@@ -1,0 +1,17 @@
+name: test #服务名字
+port: 5001
+address: 127.0.0.1 #本机服务运行地址 就宿主机ip
+version: 1.0
+
+discovery:
+  url: #node地址
+    - 127.0.0.1
+  port: 2181
+  type: zookeeper
+
+client:
+  balancer: random #consistent_hash, ketama, least_connection, random, round_robin
+  servers:
+    - name: "test"
+      version: "1.0"
+  insecure: false #目前没卵用
