@@ -16,6 +16,7 @@ docker run -p 2181:2181 --privileged --name zk zookeeper:latest
 ```
 2. Put `rpc-config.yml.example` into any place with permissions we can read and rename to `rpc-config.yml`
 You can modify your config file as what you like.
+Then set `export CONFIG_FILE=/path/to/your/config.yml`
 3. create a new project with go modules.
 ```bash
 mkdir demo
@@ -50,5 +51,33 @@ ls /services/test/1.0
 
 > You can also start an other project and change the yml `name` to run the client. It's the same as normal grpc.
 
-# Licence
+# Usage
+### Configuration
+A sample configuration is like this:
+```yml
+name: test # Your Service Name
+port: 5001 # Your Service Port
+address: 127.0.0.1 # Your Host Ip
+version: 1.0 # Your Service Version
+
+discovery:
+  url: # zookeeper addresses
+    - 127.0.0.1
+  port: 2181 # zookeeper ports
+  type: zookeeper 
+
+client:
+  balancer: random #consistent_hash, ketama, least_connection, random, round_robin
+  servers:
+    - name: "test" # as a client, this is your  dependencies service name
+      version: "1.0" # version
+  insecure: false # no use
+
+```
+
+### Server And Client
+For developing an app with both server and client available, we should have these config completed and we have an instance of `*grpc.Server` returned. You should register your service with its **proto register function** like `proto.RegisterHelloWorldService(*grpc.Server, &HelloWorldService)`.
+In some case like using iris, it can support original gRPC either. So we can use grpc like [this](https://github.com/kataras/iris/wiki/Grpc)
+
+# License
 MIT
