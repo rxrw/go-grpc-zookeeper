@@ -2,7 +2,8 @@ package balancer
 
 import (
 	"fmt"
-	"grpc-worker/common"
+
+	"gitlab.dev.baai.ac.cn/basic-service/go-grpc-zookeeper/common"
 
 	"google.golang.org/grpc/balancer"
 	"google.golang.org/grpc/balancer/base"

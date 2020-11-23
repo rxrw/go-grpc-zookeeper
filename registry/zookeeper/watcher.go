@@ -6,7 +6,7 @@ import (
 	"sync"
 	"time"
 
-	"grpc-worker/registry"
+	"gitlab.dev.baai.ac.cn/basic-service/go-grpc-zookeeper/registry"
 
 	"github.com/samuel/go-zookeeper/zk"
 	"google.golang.org/grpc/grpclog"

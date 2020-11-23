@@ -2,7 +2,8 @@ package examples
 
 import (
 	"context"
-	"grpc-worker/proto"
+
+	"gitlab.dev.baai.ac.cn/basic-service/go-grpc-zookeeper/proto"
 )
 
 //HelloWorldService make api a instance

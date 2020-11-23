@@ -1,10 +1,11 @@
 package balancer
 
 import (
-	"grpc-worker/common"
 	"math/rand"
 	"sync"
 	"time"
+
+	"gitlab.dev.baai.ac.cn/basic-service/go-grpc-zookeeper/common"
 
 	"google.golang.org/grpc/balancer"
 	"google.golang.org/grpc/balancer/base"

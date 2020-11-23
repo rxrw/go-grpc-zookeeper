@@ -4,10 +4,11 @@ import (
 	"context"
 	"encoding/json"
 	"errors"
-	"grpc-worker/registry"
 	"strings"
 	"sync"
 	"time"
+
+	"gitlab.dev.baai.ac.cn/basic-service/go-grpc-zookeeper/registry"
 
 	"github.com/samuel/go-zookeeper/zk"
 	"google.golang.org/grpc/grpclog"
