@@ -2,15 +2,16 @@ package initializer
 
 import (
 	"fmt"
-	"grpc-worker/common"
-	"grpc-worker/registry"
-	zk "grpc-worker/registry/zookeeper"
 	"log"
 	"os"
 	"os/signal"
 	"sync"
 	"syscall"
 	"time"
+
+	"gitlab.dev.baai.ac.cn/basic-service/go-grpc-zookeeper/common"
+	"gitlab.dev.baai.ac.cn/basic-service/go-grpc-zookeeper/registry"
+	zk "gitlab.dev.baai.ac.cn/basic-service/go-grpc-zookeeper/registry/zookeeper"
 
 	"github.com/google/uuid"
 	"google.golang.org/grpc"

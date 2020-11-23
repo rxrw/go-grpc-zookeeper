@@ -5,8 +5,6 @@ import (
 	"log"
 	"net"
 
-	"gitlab.dev.baai.ac.cn/basic-service/go-grpc-zookeeper/initializer"
-
 	"gitlab.dev.baai.ac.cn/basic-service/go-grpc-zookeeper/config"
 
 	"google.golang.org/grpc"
